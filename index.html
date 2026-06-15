@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreshBite Restaurant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to Main Content</a>
+
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a href="index.html" class="logo">FreshBite</a>
+      <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">
+        ☰
+      </button>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#extras">Extras</a></li>
+        <li><a href="#reservation">Reservation</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Fresh food every day</p>
+        <h1>Welcome to FreshBite Restaurant</h1>
+        <p>
+          FreshBite is a responsive restaurant website created for a portfolio project.
+          The site shows menu items, restaurant information, a reservation form, and extra interactive features.
+        </p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn primary-btn">View Menu</a>
+          <a href="#reservation" class="btn secondary-btn">Book a Table</a>
+        </div>
+      </div>
+      <div class="hero-card" aria-label="Featured meal preview">
+        <div class="plate">🍝</div>
+        <h2>Today&apos;s Special</h2>
+        <p>Garlic pasta with grilled vegetables</p>
+      </div>
+    </section>
+
+    <section class="info-grid" aria-label="Restaurant information">
+      <article>
+        <h2>Opening Hours</h2>
+        <p>Mon - Sun: 9:00 AM - 10:00 PM</p>
+      </article>
+      <article>
+        <h2>Location</h2>
+        <p>123 Main Street, Food City</p>
+      </article>
+      <article>
+        <h2>Phone</h2>
+        <p>0123 456 789</p>
+      </article>
+    </section>
+
+    <section id="menu" class="section">
+      <div class="section-title">
+        <p class="eyebrow">Our menu</p>
+        <h2>Featured Dishes</h2>
+        <p>Choose a category or search for a dish.</p>
+      </div>
+
+      <div class="controls">
+        <input type="search" id="searchInput" placeholder="Search menu..." aria-label="Search menu items">
+        <div class="filter-buttons" aria-label="Menu category filters">
+          <button class="filter-btn active" data-category="all">All</button>
+          <button class="filter-btn" data-category="meals">Meals</button>
+          <button class="filter-btn" data-category="drinks">Drinks</button>
+          <button class="filter-btn" data-category="desserts">Desserts</button>
+        </div>
+      </div>
+
+      <div class="menu-grid" id="menuGrid">
+        <article class="menu-card" data-category="meals">
+          <div class="menu-img">🍔</div>
+          <h3>Classic Burger</h3>
+          <p>Beef, cheese, lettuce, tomato, and house sauce.</p>
+          <span>$8.50</span>
+        </article>
+        <article class="menu-card" data-category="meals">
+          <div class="menu-img">🍕</div>
+          <h3>Margherita Pizza</h3>
+          <p>Tomato, mozzarella, basil, and olive oil.</p>
+          <span>$10.00</span>
+        </article>
+        <article class="menu-card" data-category="meals">
+          <div class="menu-img">🍜</div>
+          <h3>Noodle Bowl</h3>
+          <p>Warm noodles with vegetables and special broth.</p>
+          <span>$7.25</span>
+        </article>
+        <article class="menu-card" data-category="drinks">
+          <div class="menu-img">🥤</div>
+          <h3>Lemon Iced Tea</h3>
+          <p>Fresh lemon tea served cold.</p>
+          <span>$3.00</span>
+        </article>
+        <article class="menu-card" data-category="drinks">
+          <div class="menu-img">☕</div>
+          <h3>Vietnamese Coffee</h3>
+          <p>Strong coffee with condensed milk.</p>
+          <span>$3.50</span>
+        </article>
+        <article class="menu-card" data-category="desserts">
+          <div class="menu-img">🍰</div>
+          <h3>Cheesecake</h3>
+          <p>Soft cheesecake with berry topping.</p>
+          <span>$4.50</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="extras" class="section extras-section">
+      <div class="section-title">
+        <p class="eyebrow">Four extras</p>
+        <h2>Interactive Features</h2>
+      </div>
+
+      <div class="extras-grid">
+        <article>
+          <h3>1. Search and Filter Menu</h3>
+          <p>Users can search dishes by name and filter them by category.</p>
+        </article>
+        <article>
+          <h3>2. Dark Mode</h3>
+          <p>Visitors can switch between light and dark themes.</p>
+          <button id="themeToggle" class="btn small-btn">Toggle Dark Mode</button>
+        </article>
+        <article>
+          <h3>3. Reservation Form</h3>
+          <p>The booking form checks required fields before showing a confirmation.</p>
+        </article>
+        <article>
+          <h3>4. Back to Top Button</h3>
+          <p>A button appears after scrolling and helps users return to the top quickly.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="reservation" class="section reservation-layout">
+      <div>
+        <p class="eyebrow">Book now</p>
+        <h2>Reserve a Table</h2>
+        <p>
+          Complete the form to demonstrate a basic restaurant reservation feature.
+          This form is for the project demo only.
+        </p>
+      </div>
+
+      <form class="reservation-form" id="reservationForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="time">Time</label>
+        <input type="time" id="time" name="time" required>
+
+        <label for="guests">Number of guests</label>
+        <select id="guests" name="guests" required>
+          <option value="">Choose</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5+</option>
+        </select>
+
+        <button type="submit" class="btn primary-btn">Submit Reservation</button>
+        <p id="formMessage" class="form-message" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer id="contact" class="site-footer">
+    <h2>FreshBite Restaurant</h2>
+    <p>Email: hello@freshbite.example | Phone: 0123 456 789</p>
+    <p>&copy; 2026 FreshBite. Portfolio project website.</p>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
